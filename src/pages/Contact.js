@@ -21,6 +21,13 @@ const contactButtons = [
     href: 'https://www.linkedin.com/in/ibtissem-bouhlel-2aab8b199/',
   },
   {
+    icon: '🖇',
+    label: 'GitHub',
+    value: 'https://github.com/ibtissem-bouhlel',
+    color: '#FFB347',
+    href: 'https://github.com/ibtissem-bouhlel',
+  },
+  {
     icon: '💬',
     label: 'WhatsApp',
     value: '+216 53 132 001',
