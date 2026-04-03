@@ -7,10 +7,10 @@ export default function Home() {
         <p style={{ color: '#00D4AA', fontSize: 14, letterSpacing: 3,
           textTransform: 'uppercase', marginBottom: 16 }}>Welcome to my portfolio</p>
   
-        <h1 style={{ fontSize: 'clamp(36px, 6vw, 72px)', fontWeight: 700,
+        <h1 style={{ fontSize: 'clamp(36px, 6vw, 72px)', fontWeight: 500,
           lineHeight: 1.15, marginBottom: 20 }}>
           Hi, I'm <span style={{ color: '#6C63FF' }}>Ibtissem Bouhlel</span> <br />
-          Network Administrator
+          Network & Security Specialist
         </h1>
   
         <p style={{ color: '#888', fontSize: 18, maxWidth: 560, marginBottom: 40, lineHeight: 1.7 }}>

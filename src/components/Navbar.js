@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav style={navStyle}>
       <span style={{ color: '#6C63FF', fontWeight: 700, fontSize: 20 }}>
-        &lt;Ibtissem Bouhlel /&gt;
+         Ibtissem Bouhlel
       </span>
       <div style={{ display: 'flex', gap: 32 }}>
         {links.map(l => (
