@@ -6,9 +6,12 @@ const projects = [
     short: 'Design and implementation of a secure cloud network infrastructure on AWS using EC2 instances, VPN, routing, and monitoring.',
     tags: ['AWS', 'Cloud', 'VPC','Security', 'High availability',' Monitoring'],
     color: '#6C63FF',
+    
     icon: '🔒',
+      github: 'https://github.com/ibtissem-bouhlel/Implementation-of-a-multi-tier-Cloud-network-on-AWS-VPC', // ← add your link
     details: {
       description: 'This work is developed as part of the final project for obtaining the Professional Master s degree in System and Network Security at the Higher Institute of Computer Science and Communication Technologies of Sousse. This project focuses on the implementation of a multi-tier Cloud network to ensure high availability, enhanced security, and continuous compliance. By integrating advanced monitoring and security solutions, it ensures proactive protection and efficient management of Cloud resources.',
+      
       tools: ['EC2', 'Subnets', 'Security Group', 'NACL', 'Route Tables', 'Internet Gateway', 'Flow LOG', 'CloudTrail', 'CloudWatch', 'AWS Lambda','SNS Notification'],
       steps: [
         'Network Design and Segmentation',
@@ -26,6 +29,7 @@ const projects = [
     tags: ['QIA', 'ESP32', 'Detection', 'Web', 'React','Firebase'],
     color: '#00D4AA',
     icon: '📡',
+      github: 'https://github.com/ibtissem-bouhlel/airsystem',
     details: {
       description: 'This end-of-study project was developed at ARCANGEL Technologies. The goal was to design a connected air quality analyzer that continuously monitors environmental pollutants in indoor spaces, in compliance with air quality regulations. The system is built around an ESP32 microprocessor and detects CO, CO2, hydrogen, smoke, dust, fine particles, temperature, humidity, luminosity, atmospheric pressure, and sound levels. All data is synchronized in real-time with Firebase and visualized through a React JS web application.',
       tools: ['Arduino', 'ReactJs', 'Bootstrap', 'Firebase', 'php'],
@@ -69,12 +73,14 @@ export default function Projects() {
               cursor: 'pointer',
               transition: 'all 0.3s',
               transform: selected === i ? 'scale(1.02)' : 'scale(1)',
-            }}
+              
+            }} 
           >
             <div style={{ fontSize: 36, marginBottom: 12 }}>{p.icon}</div>
-            <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}>{p.title}</h3>
+            <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}>{p.title}</h3> 
             <p style={{ color: '#888', fontSize: 14, lineHeight: 1.7, marginBottom: 16 }}>{p.short}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 16 }}>
+               
               {p.tags.map(t => (
                 <span key={t} style={{
                   background: `${p.color}20`, color: p.color,
@@ -82,6 +88,8 @@ export default function Projects() {
                 }}>{t}</span>
               ))}
             </div>
+            
+            
             <div style={{ color: p.color, fontSize: 13, fontWeight: 500 }}>
               {selected === i ? '▲ Hide details' : '▼ Show details'}
             </div>
@@ -91,6 +99,8 @@ export default function Projects() {
       </div>
 
       {/* DETAILS PANEL */}
+
+    
       {selected !== null && (
         <div style={{
           marginTop: 32,
@@ -101,6 +111,7 @@ export default function Projects() {
           borderLeft: `4px solid ${projects[selected].color}`,
           animation: 'fadeIn 0.3s ease',
         }}>
+         
           <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16, color: projects[selected].color }}>
             {projects[selected].icon} {projects[selected].title}
           </h3>
@@ -112,6 +123,7 @@ export default function Projects() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
 
             {/* TOOLS */}
+            
             <div>
               <h4 style={{ fontSize: 16, fontWeight: 600, marginBottom: 14, color: '#ccc' }}>
                 🛠️ Tools Used
@@ -141,21 +153,21 @@ export default function Projects() {
                     <span style={{ color: projects[selected].color, marginTop: 2 }}>✓</span>
                     {s}
                   </li>
+                  
                 ))}
               </ul>
-              
 
             </div>
-
-          </div>
+<a href="https://github.com/ibtissem-bouhlel "> Github Projects </a>             
+       </div>
+          
         </div>
+        
       )}
 
       <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to   { opacity: 1; transform: translateY(0);    }
-        }
+       
+        
       `}</style>
     </div>
   );
